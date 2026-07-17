@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson: Bootstrap 5 Responsive Grid & Navbar</title>
+    
+    <!-- Bootstrap 5.3.3 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN (For the hamburger toggle or branding accents) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        /* =========================================================================
+           1. CUSTOM THEME DESIGN OVERRIDES (Nordic Slate Palette)
+           ========================================================================= */
+        body {
+            background-color: #d6c1ab; /* Soft Ice background */
+            color: #751b41; /* Deep Slate text color */
+        }
+         .custom-navbar {
+            background-color: #796473 !important; /* Deep Slate Base */
+            border-bottom: 3px solid #CAD183; /* Mint Green Accent Base Line */
+        }
+
+        .custom-navbar .navbar-brand {
+            color: #ffc48c!important; /* Mint Green Brand text */
+            font-weight: 700;
+        }
+
+        .custom-navbar .nav-link {
+            color: #f8fafc !important; /* Soft Ice Links */
+            transition: color 0.2s ease-in-out;
+        }
+
+        .custom-navbar .nav-link:hover, 
+        .custom-navbar .nav-link.active {
+            color: #c0d684!important; /* Mint Green Hover Highlight */
+        }
+
+        /* Custom Header Styling Rules */
+        .custom-nordic-header {
+            background-color: #998193 !important; 
+            color: #ffffff !important;
+        }
+
+        .custom-nordic-header h1 {
+            color: #563e57 !important; 
+        } 
+           .gallery-section {
+            background-color: #998193;
+            border-radius: 12px;
+            margin-bottom: 4rem;
+            border: 1px solid #998193;
+            
+            /* EXPLICIT SIZE BASE PARENT PADDING: 
+               This padding acts as the exact structural margin frame for our internal column cards. */
+            padding: 2rem; 
+        }
+
+        .gallery-matrix-grid {
+            display: flex;
+            flex-wrap: wrap;
+            
+            /* The matrix gap matches our section padding parameter for uniform spacing balance */
+            gap: 2rem; 
+        }
+
+        /* 3. DIMENSION-CAPPED THUMBNAIL COMPONENT CARDS */
+        .image-card {
+            background-color: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #ffc48c;
+            max-height: 35rem;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-title {
+            padding: 1rem 1rem 0.25rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .image-description {
+            padding: 0 1rem 1rem;
+            font-size: 0.85rem;
+            color: #751b41;
+            text-align: center;
+            line-height: 1.4;
+        }
+         .columns-3 .image-card {
+            flex: 0 0 calc((100% - (2rem * 2)) / 3);
+        }
+
+        .columns-4 .image-card {
+            flex: 0 0 calc((100% - (2rem * 3)) / 4);
+        }
+
+        /* 5. RESPONSIVE FALLBACK SAFETY: Snap to single rows on small mobile displays */
+        @media (max-width: 650px) {
+            .columns-2 .image-card,
+            .columns-3 .image-card,
+            .columns-4 .image-card {
+                flex: 0 0 100%;
+            }
+        }
+        </style>
+        <head>
+        </head>
+        <body>
+        <nav class="navbar navbar-expand-md navbar-dark custom-navbar shadow-sm sticky-top mb-4">
+    <div class="container">
+        <!-- Brand/Logo Link Header -->
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-cake-fill me-2"></i>THE DAILY CRUMB
+        </a>
+        
+        <!-- Mobile Toggle Button (Hamburger Menu) -->
+        <button class="navbar-toggler border-0" type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#mainDepartmentNavbar" 
+                aria-controls="mainDepartmentNavbar" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Navbar Content Container Box Component -->
+        <div class="collapse navbar-collapse" id="mainDepartmentNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="CSSBT-ACTIVITY-9.HTML">Bakery's  Homepage</a></li>
+                <li class="nav-item"><a class="nav-link" href="CSSBT-ACTIVITY-9ABOUT.US.HTML">About Us</a></li>
+                <li class="nav-item"><a a class="nav-link active" aria-current="page" href="CSSNT-ACTIVITY-9ABOUTME.HTML">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="log incssbt-activity.html">log-in</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- =========================================================================
+     3. MAIN STRUCTURAL GRID CONTENT
+     ========================================================================= -->
+<div class="container">
+    
+    <!-- Header Block Component Layout -->
+    <div class="custom-nordic-header text-center text-md-start p-4 p-md-5 rounded-3 mb-4 shadow-sm">
+        <h1 class="fw-bold mb-2">THE DAILY CRUMB BAKERY!</h1>
+        <p class="lead mb-0">Sweet Pastries and Baked Goods</p>
+    </div>
+
+<div class="content-container">
+  <section class="gallery-section">
+            <div class="gallery-matrix-grid columns-3">
+                
+                <div class="image-card">
+                    <img src="ube lava cake seasonal special.jfif" alt="Ube lava cake">
+                    <div class="image-title">UBE LAVA CAKE</div>
+                    <p class="image-description">A soft cake with rich ube flavor.</p>
+                </div>
+
+                <div class="image-card">
+                    <img src="ube halaya seasonal special.jfif" alt="Ube Halaya">
+                    <div class="image-title">UBE HALAYA</div>
+                    <p class="image-description">A sweet and creamy ube treat.</p>
+                </div>
+
+                <div class="image-card">
+                    <img src="ube biko.jfif" alt="Ube Biko with Custard toppings">
+                    <div class="image-title">UBE BIKO</div>
+                    <p class="image-description">A chewy rice cake with a sweet topping.</p>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="gallery-matrix-grid columns-4">
+                
+                <div class="image-card">
+                    <img src="cosmos_1489461034.jpeg" alt="Cosmos image">
+                    <div class="image-title">RASPBERRY CREAMPUFF</div>
+                    <p class="image-description">A light pastry with creamy raspberry filling.</p>
+                </div>
+
+                <div class="image-card">
+                    <img src="croissant assorted cream filled dessert.webp" alt="Ube Halaya">
+                    <div class="image-title">CUBE CROISSANT</div>
+                    <p class="image-description">A flaky pastry with rich cream inside.</p>
+                </div>
+
+                <div class="image-card">
+                    <img src="cosmos_1422698109.jpeg" alt="Ube Biko with Custard toppings">
+                    <div class="image-title">FRUIT TARTS</div>
+                    <p class="image-description">A crisp tart with fresh fruit on top.</p>
+                </div>
+
+                <div class="image-card">
+                    <img src="cinnamon rolls.webp" alt="Cosmos image">
+                    <div class="image-title">CINNAMON ROLLS</div>
+                    <p class="image-description">Soft rolls with sweet cinnamon flavor.</p>
+                </div>
+            </div>
+        </section>
+</div>
+
+
+        </body>
+        </head>
+        

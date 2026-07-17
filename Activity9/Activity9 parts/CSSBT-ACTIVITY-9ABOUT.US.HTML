@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN (For the hamburger toggle or branding accents) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+     <style>
+        /* =========================================================================
+           1. CUSTOM THEME DESIGN OVERRIDES (Nordic Slate Palette)
+           ========================================================================= */
+        body {
+            background-color: #d6c1ab; /* Soft Ice background */
+            color: #751b41; /* Deep Slate text color */
+        }
+         .custom-navbar {
+            background-color: #796473 !important; /* Deep Slate Base */
+            border-bottom: 3px solid #CAD183; /* Mint Green Accent Base Line */
+        }
+
+        .custom-navbar .navbar-brand {
+            color: #ffc48c!important; /* Mint Green Brand text */
+            font-weight: 700;
+        }
+
+        .custom-navbar .nav-link {
+            color: #f8fafc !important; /* Soft Ice Links */
+            transition: color 0.2s ease-in-out;
+        }
+
+        .custom-navbar .nav-link:hover, 
+        .custom-navbar .nav-link.active {
+            color: #c0d684!important; /* Mint Green Hover Highlight */
+        }
+
+        /* Custom Header Styling Rules */
+        .custom-nordic-header {
+            background-color: #998193 !important; 
+            color: #ffffff !important;
+        }
+
+        .custom-nordic-header h1 {
+            color: #563e57 !important; 
+        }
+         .image-card {
+            background-color: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #ffc48c;
+            max-height: 55rem;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .columns-3 .image-card {
+            flex: 0 0 calc((100% - (2rem * 1)) / 1);
+        }
+
+        </style>
+</head>
+<body>
+            <nav class="navbar navbar-expand-md navbar-dark custom-navbar shadow-sm sticky-top mb-4">
+    <div class="container">
+        <!-- Brand/Logo Link Header -->
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-cake-fill me-2"></i>THE DAILY CRUMB
+        </a>
+        
+        <!-- Mobile Toggle Button (Hamburger Menu) -->
+        <button class="navbar-toggler border-0" type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#mainDepartmentNavbar" 
+                aria-controls="mainDepartmentNavbar" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Navbar Content Container Box Component -->
+        <div class="collapse navbar-collapse" id="mainDepartmentNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="CSSBT-ACTIVITY-9.HTML">Bakery's  Homepage</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="CSSBT-ACTIVITY-9ABOUT.US.HTML">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="CSSNT-ACTIVITY-9ABOUTME.HTML">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="log incssbt-activity.html">log-in</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-4">
+    <div class="custom-nordic-header text-center p-4 p-md-5 rounded-3 mb-4 shadow-sm">
+        <h1 class="fw-bold mb-2">About The Daily Crumb</h1>
+        <p class="lead mb-0">A small bakery growing with passion, heart, and delicious pastries.</p>
+    </div>
+    <div class="content-container">
+  <section class="gallery-section">
+            <div class="gallery-matrix-grid columns-3">
+                
+                <div class="image-card">
+                    <div class="image-card">
+                    <img src="daily crumb bakery.webp" alt="Ube lava cake">
+                </div>
+
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm p-3">
+                <h3 class="fw-bold h5 text-primary mb-3">Our Story</h3>
+                <p class="mb-0">The Daily Crumb began as an online shop built with love, creativity, and a passion for baking. We started small, sharing sweet treats that bring comfort and happiness to every customer. Our goal is to grow into a trusted bakery known for quality, warmth, and unforgettable pastries.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <h3 class="fw-bold h5 text-primary mb-3">Our Mission</h3>
+                <p class="mb-0">Our mission is to make every dessert feel special and every customer feel welcomed. We strive to create pastries that are delicious, beautifully made, and shared with heart.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-3">
+                <h3 class="fw-bold h5 text-primary mb-3">Our Leadership</h3>
+                <p class="mb-0">Our leadership is guided by passion, dedication, and a strong belief in hard work. We are a young business learning and growing each day, while staying true to our values and our customers.</p>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card border-0 shadow-sm p-3">
+                <h3 class="fw-bold h5 text-primary mb-3">Why Your Support Matters</h3>
+                <p class="mb-0">We are still on our journey as a starting business, and your support means everything to us. By choosing The Daily Crumb, you help us grow, improve, and continue sharing our passion for pastries with the world.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
